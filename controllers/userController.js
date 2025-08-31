@@ -95,7 +95,7 @@ const adminLogin = async (req, res) => {
             const token = jwt.sign(email + password, process.env.JWT_SECRET);
 res.json({success:true,token})
         }else{
-            res.josn({success:false,message:"Invalid ceredentials"})
+            res.json({success:false,message:"Invalid ceredentials"})
         }
 
     } catch (error) {
